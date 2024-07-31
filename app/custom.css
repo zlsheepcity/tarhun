@@ -7,7 +7,23 @@
 [article-introduction] {
     padding-top: 2em;
 }
+[article-introduction] h1 {
+    font-size: 1.6em;
+    line-height: 1;
+}
 [article-introduction] p {
     max-width: 28em;
 }
 
+[article-about] {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+[article-about] p {
+    font-size: 1.25em;
+    color: var(--accent-color, inherit);
+}
+
+[article-information] li {
+    padding-bottom: 1em;
+}

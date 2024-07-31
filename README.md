@@ -1,2 +1,3 @@
-# Tarhun'22
+# Tarhun
+
 Event promo page
