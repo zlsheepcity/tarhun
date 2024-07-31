@@ -4,6 +4,9 @@
 
 [display-block] {display:block}
 
+[article-introduction] {
+    padding-top: 2em;
+}
 [article-introduction] p {
     max-width: 28em;
 }
