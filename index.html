@@ -1,452 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- .htmlseed 24.5.10 Len ~ ʕ⊙ᴥ⊙ʔ ~ -->
 
-    <title>タラゴン`23 Tarhun</title>
+    <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> Tab data -->
+    <title>タラゴン Tarhun`24</title>
+    <meta name="description" content="Мероприятие для детей в дикой природе">
+    <meta name="theme-color" content="#314159">
+    <link rel="icon" type="image/png" href="app/icon512.png">
+    <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ -->
 
-    <!-- ## MICRODATA -->
-    <meta property="og:url"          content="https://zlsheepcity.github.io/tarhun/" />
-    <meta property="og:image"        content="https://zlsheepcity.github.io/tarhun/art/icon.jpg" />
-    <meta property="og:image:width"  content="754" />
-    <meta property="og:image:height" content="628" />
-    <meta property="og:type"         content="article" />
-    <meta property="og:locale"       content="ru_RU" />
-
-    <!-- FAVICON -->
-    <!-- 2019.1, best favicon service: https://realfavicongenerator.net/ -->
-    <meta name="theme-color" content="#314863">
-    <meta name="msapplication-TileColor" content="#314863">
-    <meta name="msapplication-TileImage" content="app/favicons/144x144.png">
-    <link href="app/favicons/180x180.png" sizes="180x180" rel="apple-touch-icon">
-    <link href="app/favicons/192x192.png" sizes="192x192" rel="icon" type="image/png">
-
-    <!-- DESIGN -->
-    <!-- 2022.8.22, initial design -->
-
-    <link
-        href="app/appart-01-base.css"
-        rel="stylesheet" type="text/css">
-    <link
-        href="app/appart-02-markup.css"
-        rel="stylesheet" type="text/css">
-    <link
-        href="app/appart-03-typography.css"
-        rel="stylesheet" type="text/css">
-    <link
-        href="app/appart-04-colors.css"
-        rel="stylesheet" type="text/css">
-
-    <link
-        media="all"
-        href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700&subset=cyrillic"
-        rel="stylesheet">
-    <link
-        media="all"
-        href="https://fonts.googleapis.com/css?family=VT323"
-        rel="stylesheet">
-
-    <style>
-        h1, h2, h3, h4, h5, h6 {
-            ---font-family: var(--font-family-secondary);
-            font-weight: bolder;
-            margin-top: 1rem;
-        }
-        h1, h2, h3, h4, h5, h6, p {
-            max-width: 32rem;
-        }
-
-        h1 {
-            font-size:   var(--h1-font-size);
-            line-height: var(--h1-line-height);}
-        h2 {
-            font-size:   var(--h2-font-size);
-            line-height: var(--h2-line-height);}
-        h3 {
-            font-size:   var(--h3-font-size);
-            line-height: var(--h3-line-height);}
-        h4 {
-            font-size:   var(--h4-font-size);
-            line-height: var(--h4-line-height);}
-        h5 {
-            font-size:   var(--h5-font-size);
-            line-height: var(--h5-line-height);}
-        h6 {
-            font-size:   var(--h6-font-size);
-            line-height: var(--h6-line-height);}
-    </style>
-
+    <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> CSS preset 2024 -->
     <style>
         body {
-            background-color: var(--color-PaperBack);
-            color:            var(--color-PaperDark);
-            ---font-size: 125%;
-            ---line-height: 1.2;
+          --colorPaperTone: hsl( 37, 55%, 85%);
+          --colorPaperDark: hsl(  0,  0%,  8%);
+          --colorPaperRose: hsl(359, 59%, 43%);
+
+          --background-color: var(--colorPaperDark);
+          --foreground-color: var(--colorPaperTone);
+              --accent-color: var(--colorPaperRose);
         }
-        .colors--darken {
-            background-color: var(--color-NobleNight);
-            color:            var(--color-NobleWhite);
+
+        body {
+            background-color: var(--background-color);
+            margin: 0; color: var(--foreground-color);
+            font-family: monospace; overflow-y:scroll;
         }
-        article {
-            padding: 1em 2em;
+
+        a {
+            color: inherit;
+            text-decoration: underline;
         }
-        article.illustrations {
-            padding: 0;
-            background-color: var(--color-NobleBlack);
-            color:            var(--color-NobleWhite);
-        }
-        article.illustrations img {
-            width: 100%;
-            max-width: 2160px;
-            margin: 0 auto;
-        }
-        video {
-            display: block;
+
+        img, video, svg {
+            margin: 0;
+            border: 0;
             max-width: 100%;
-        }
-    </style>
-
-    <!-- component: code -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css?family=VT323"
-        rel="stylesheet">
-
-    <style display-source code-block>
-        /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ Typography */
-
-        [code-block] {
-            font-family: 'Ubuntu Mono', monospace;
-            font-size:    12px;
-            line-height:  1.25;
-            tab-size:     4;
-            white-space:  pre;
-            font-weight:  normal;
-            font-variant-ligatures: none;
-        }
-
-        /** Google Font
-            @import url('https://fonts.googleapis.com/css?family=VT323');
-            <link
-                href="https://fonts.googleapis.com/css?family=VT323"
-                rel="stylesheet">
-        **/
-
-        /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ Layout */
-
-        [code-block] {
-            display:    block;
-            min-height: 5rem;
-            margin:     0;
-            border:     0;
-            padding:    1rem;
-            overflow:   auto;
-            overflow-y: hidden;
-            position:   relative;
-            resize:     none;
-        }
-
-        /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ Decoration Design */
-
-        [code-block][theme-green] { --theme-HSL-text: 91, 100%, 50%; }
-        [code-block][theme-brown] { --theme-HSL-text: 41, 100%, 50%; }
-        [code-block] {
-          --theme-HSL-text: 41, 100%, 50%;
-          --theme-HSL-back: 226, 15%, 12%; /* NobleBlack */
-
-          --code-back-color:  hsla(var(--theme-HSL-back), 1);
-          --code-text-color:  hsla(var(--theme-HSL-text), 0.80);
-          --code-drag-color:  hsla(var(--theme-HSL-text), 0.60);
-          --code-text-shadow: hsla(var(--theme-HSL-text), 0.10);
-          --code-back-shadow: hsla(var(--theme-HSL-back), 0.75);
-          --light-00: hsla(var(--theme-HSL-text), 0.00);
-          --light-01: hsla(var(--theme-HSL-text), 0.01);
-          --light-05: hsla(var(--theme-HSL-text), 0.05);
-          --light-15: hsla(var(--theme-HSL-text), 0.15);
-
-            background-color: var(--code-back-color);
-            color:            var(--code-text-color);
-            text-shadow:      var(--code-text-shadow) .5em 0 .2em;
-            box-shadow:       inset 0 0 4em var(--code-back-shadow);
-            border-radius: 4px;
-
-            background-size:  100% 100%, 100% 2px;
-            background-image:
-                linear-gradient( to bottom,
-                    var(--light-05),
-                    var(--light-15) 0.5em,
-                    var(--light-05)   2em,
-                    var(--light-05)   2em,
-                    var(--light-00)
-                ),
-                linear-gradient( to bottom,
-                    var(--light-15),
-                    var(--light-15) 50%,
-                    var(--light-00) 50%,
-                    var(--light-00)
-                );
-        }
-
-        /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ Components */
-
-        [code-block] mark {
-            background-color: var(--code-text-color);
-            color:            var(--code-back-color);
-        }
-        [code-block] a {
-            text-decoration:  underline;
-            color:            inherit;
-        }
-
-        /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ Scanning Line */
-
-        [code-block]::after {
-            content:  "";
             display:  block;
-            position: absolute;
-            z-index:  1;
-            top:      0;
-            bottom:   0;
-            left:     0;
-            right:    0;
-
-            animation: CodeBlockScanline 12s linear infinite;
-            background-size:   cover;
-            background-repeat: no-repeat;
-            background-image:  linear-gradient( to bottom,
-                var(--light-00)  0,
-                var(--light-00)  1.00em,
-                var(--light-05)  3.00em,
-                var(--light-15)  3.10em,
-                var(--light-01)  3.11em,
-                var(--light-05)  3.20em,
-                var(--light-00)  3.30em,
-                var(--light-00) 10.00em
-            );
-
-            cursor:          pointer;
-            pointer-events:  none;
-        }
-
-        @keyframes CodeBlockScanline {
-            from { transform: translateY(-4em); }
-            to   { transform: translateY(100%); }
-        }
-
-        /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ Scrollbar */
-
-        [code-block] {
-            scrollbar-color: var(--code-bar-color) transparent;
-        }
-        [code-block]::-webkit-scrollbar {
-            width: 0.5rem;
-        }
-        [code-block]::-webkit-scrollbar-track {
-            -webkit-box-shadow: none;
-        }
-        [code-block]::-webkit-scrollbar-thumb {
-            background-color:  var(--code-drag-color);
-            outline: 1px solid var(--code-drag-color);
         }
     </style>
-
+    <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> CSS custom -->
+    <style>
+        [contenteditable] {
+            color: var(--accent-color, inherit);
+            border-left: 1em solid currentColor;
+        }
+        [accent-color] {
+            color: var(--accent-color);
+        }
+    </style>
+    <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> CSS stylesheet -->
+    <link
+        href="app/combo.css"
+        type="text/css" rel="stylesheet" media="all">
+    <link
+        href="app/compo.css"
+        type="text/css" rel="stylesheet" media="all">
+    <link
+        href="app/custom.css"
+        type="text/css" rel="stylesheet" media="all">
+    <link
+        href="app/cfonts.css"
+        type="text/css" rel="stylesheet" media="all">
+    <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ -->
 
 </head>
 <body>
+    <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> introduction -->
+    <article article-introduction class="layoutBook">
 
-    <article>
-        <h2 style="max-width: 42rem;">Последнее воскресение лета</h2>
-        <h1>タラゴン`23 Тархун</h1>
-        <p>Информация и организационные вопросы</p>
-    </article>
+        <header>
+            <h1>
+                タラゴン 2024
+                <span accent-color>[Tarhun]</span>
+            </h1>
+            <h3>Lilaste, 31 august — 1 september</h3>
+        </header>
 
-<code code-block>
-タラゴン`23 Тархун орг план
-updated 8·8·1124
-
-== Vendredi VIII·25 == вечер
-— захват территории [BASE1]
-— пятничный угар
-— заготовка детей на следующий год
-
-== Samedi VIII·26 == утро-день
-— чиллвахуэ
-— организация территории
-— заготовка бревен для костра
-
-== Samedi VIII·26 == 16:00
-— встреча на стоянке [P2]
-— групповой переход по Арбузным холмам
-
-== Samedi VIII·26 == 17:00
-— общий сбор [BASE1]
-— начало ¹
-
-== Samedi VIII·26 == 20:00
-— большой костёр
-
-== Dimanche VIII·27 == 11:00
-— общий сбор
-— финальная церемония
-
-== Dimanche VIII·27 == утро-день
-— чиллвахуэ ²
-— обязательная спортивная программа
-— уборка с територии людей и мусора
-
-== Vendredi IX·1 == вечер
-— афтепати
-
-¹ Начало, в смысле, типа официальное для детей и тех мамок,
-которые приедут чиловать как юрмальские боярыни,
-а не угорать таская брёвна и котелки с кашей.
-
-² Утренний рит-рит включает любимые и проверенные
-временем медитации: утренний косой, кашка, алус,
-гопля и штивер, обнимашки.
-
-[P2] — 57.181055, 24.332086
-Парковка у забора около станции Лиласте
-
-[BASE1] — 57.174948, 24.301666
-Примерно там
-</code>
-
-    <article>
-    <h2>Тархун №2 —</h2>
-        <p>Это культурный отдых на природе, с ночёвкой в палатках на берегу моря. Для самых маленьких детей, их родителей и опытных походников в одной компании.</p>
-
-        <h3>Когда ехать?</h3>
-        <p>В ночь с субботы на восресение, 26—27 августа.</p>
-
-        <h3>А точнее? Время?</h3>
-        <p>Как вам удобно, на море вас примут аж с пятницы. Рекомендую приезжать до заката.</p>
-
-        <h3>Куда ехать?</h3>
-        <p>Дикий пляж Лиласте.</p>
-        <p>57.17467458658338, 24.300695066714624</p>
-        <p><a href="https://www.google.com/maps/place/Lilaste+beach/@57.1740279,24.3037253,16.75z/data=!4m13!1m7!3m6!1s0x46eeb0d0ee4a5ccd:0x9d9f8675a04b0f5d!2sLilaste,+Saulkrastu+lauku+teritorija!3b1!8m2!3d57.1903185!4d24.3491152!3m4!1s0x46eeb74736297241:0x84dd68f817b6980c!8m2!3d57.1745302!4d24.300705!5m1!1e4">Ссылка на гугл карту</a></p>
-
-        <h3>Может, всё-таки скооперируемся и вместе будем добираться до места?</h3>
-        <p>Конечно, да. Обсуждается в чате ближе к делу.</p>
-
-        <h3>Мой ребёнок никогда не ночевал в палатке. Я волнуюсь.</h3>
-        <p>Конечно, да. Для этого и делаем.</p>
-
-        <h3>А ещё вопросы?</h3>
-        <p>Конечно, да.</p>
-    </article>
-
-    <article class="colors--darken">
-        <h2>Но сначала — манящие картинки!</h2>
-    </article>
-
-    <article class="illustrations">
-        <video autoplay loop muted>
-            <source src="art/Night-camp-by-Kiver.webm"
-                    type="video/webm">
-            <source src="art/Night-camp-by-Kiver.mp4"
-                    type="video/mp4">
-        </video>
-        <img src="art/Manit-01-by-Kiver.jpg" alt="Night sky and sea beach by Kiver">
-        <img src="art/Manit-02-eda.jpg" alt="Tasty food on the beach">
-    </article>
-
-
-    <article>
-        <p>Обновлено: 26 июля, 7:00</p>
-        <h3>Точка встречи</h3>
-        <p class="h3">
-            Суббота, 26 августа,<br/>
-            16:00, станция Lilaste
-        </p>
-        <p>NB: Не сама станция, выйдя с электрички надо перейти железную дорогу и кусты до ближайшего леса. Точка P2 на карте ниже.</p>
-        <h4>Водитель, не паркуйся у переезда!</h4>
-        <p>В это время стоянки обычно забиты и многие паркуются вдоль обочины. Но есть правило, запрещающее парковаться вдоль дороги ближе 100 метров от железнодорожнего переезда. Там все тупят и иногда получают. Не будь лохом.</p>
-    </article>
-
-    <article>
-        <img src="art/Tarhun-map01sq.jpg" alt="Map of the Lilaste paths">
-        <img src="art/Tarhun-map02gugl.jpg" alt="Guglmap of the Lilaste area">
-        <p>Остров на озере — это ориентир, стоянки на пляже. Проведите линию от середины острова до морского берега. (По этой линии в лесу идёт просека через горы)</p>
-    </article>
-
-    <article class="colors--darken">
-        <h3>Ты не забыл взять:</h3>
-        <h4>— Большой пакет для мусора</h4>
-        <p>Чтобы собрать весь свой мусор и чужой, найденный в лесу.</p>
-        <h4>— Вода, 2 литра на человека</h4>
-        <h4>— Головной убор — защита от солнца</h4>
-        <h4>— Любимый музыкальный иструмент</h4>
-        <h4>— Хочешь что-то принести в общак? Универсальный совет — Бери зелёное!</h4>
-        <p>Авокадо, киви, тархун, пиво в зелёных банках, зелень, зелень...</p>
-        <h3>
-            Детей взять не забудь!
-            <img src="art/izlisenok-v00.svg" alt="izlisenok">
-        </h3>
-    </article>
-
-    <article>
-        <img src="art/Tarhun-planVectorOpti.svg" alt="План похода">
-    </article>
-
-
-    <style>
-        .story-tale { background-color: yellow; }
-        .story-tale p { padding-top: 1em; }
-    </style>
-    <article class="story-tale">
-
-        <h4>Попробую описать советы для ночёвки на море с ребёнком...</h4>
-
-        <p>Предположим, что я ребёнок в возрасте в котором умею открывать молнию палатки. Со мной идёт мама, которая много тяжести не утащит. Поехали!
-
-        <p>1. Путь через холмистый лес. Не дольше часа. На мне рюкзак в котором есть пол литра воды и шоколадка, которая по жаре не превратится в кашу.
-
-
-        <p>2. Пришли на море, сразу перекусили с дороги. Порезанные овощи, сыры, печеньки и т.д. Пластиковый ланч-бокс с крышкой всегда пригодится.
-
-        <p>3. На мне пляжная одежда. Есть коврик, чтобы лежать не на песке. Книжка. Мяч и лопатка — лучшие игрушки. Возможно, есть краски, чтобы раскрашивать брёвна шаманистана.
-
-        <p>4. Готовится горячая еда. У меня есть миска-ложка.
-
-        <p>5. Солнце село. Костёр. Штанишки и кофта. Фонарик — не столько необходимо, сколько прикольно. Комаров на море нет.
-
-        <p>6. Я ночую в палатке, которая укроет от ветра и потенциального дождя. В палатку обязательно кладётся коврик-пенка. Лёгкий спальник, можно одеяло но в спальнике интереснее.
-
-        <p>7. Перекус перед сном или посреди ночи, чтобы спокойно заснуть. Чистка зубов/умывание.  Вода в палатке на ночь.
-
-        <p>8. Горячий завтрак — кашка или ролтон. Печеньки.
-
-        <h4>Итого по вещам:</h4>
-        <p> — Рюкзак
-        <br>— Палатка
-        <br>— Коврик-пенка (важна изоляция от земли)
-        <br>— Спальник
-        <br>— Вечерняя одежда
-        <br>— Полотенце после купания
-        <br>— Ложка, миска,  ланч-бокс.
-        <br>— Фонарик
-        <br>— Зубная щётка, туалетные салфетки
-        <br>— Игрушка и книжка
+        <section>
+            <p>
+                Мы видели детей расплывающихся в улыбке, когда осознавали себя проснувшимися в палатке на природе.
+            </p>
+            <p>
+                Мы видели мамок внезапно обнаруживших, что могут беззаботно упасть на морской песок и отдыхать в удовольствие.
+            </p>
+            <p>
+                Мы видели самих себя много лет назад — малышей изучающих природу и играющих в весёлой компании.
+            </p>
+            <p>
+                Поэтому, каждый год мы делаем Тархун. Приезжайте!
+            </p>
+            <p>
+                <span accent-color>#izlesu</span>
+            </p>
+        </section>
+        <blockquote>
+            <img class="Xratio --fitme"
+                 src="art/izlisenok-v00.svg"
+                 alt="">
+        </blockquote>
 
     </article>
 
-    <article>
-        <h2>При поддержке:</h2>
-        <h3>izlesu</h3>
-        <p>Учись беречь природу и красиво отдыхать!</p>
-        <h3>Текила</h3>
-        <p>Мы знаем как это делать 23 года подряд ™</p>
-        <h3>@a.kiver</h3>
-        <p>Делай волшебные картинки с ночным небом!</p>
-        <h3>Зиновий</h3>
-        <p>Конечно, да.</p>
+
+    <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> introduction gallery -->
+    <article class="layoutGallery">
+        <section class="gridline XXX">
+            <img class="Qratio fitme"
+                 src="art/icon.jpg"
+                 alt="">
+            <img class="Qratio fitme"
+                 src="art/icon.jpg"
+                 alt="">
+            <img class="Qratio fitme"
+                 src="art/icon.jpg"
+                 alt="">
+        </section>
     </article>
 
+    <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> outro -->
+    <article article-introduction class="layoutBook">
+        <section>
+            <h2>Ссылки</h2>
+            <ul>
+                <li>
+                    <a href="tarhun2023.html">Тархун 2022-2023</a>
+                </li>
+            </ul>
+        </section>
+    </article>
+
+    <!-- ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~>> END -->
 </body>
 </html>

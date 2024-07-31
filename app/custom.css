@@ -1,0 +1,10 @@
+/** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ customcss */
+/** customcss **/
+/** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
+
+[display-block] {display:block}
+
+[article-introduction] p {
+    max-width: 28em;
+}
+
