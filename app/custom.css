@@ -21,9 +21,31 @@
 }
 [article-about] p {
     font-size: 1.25em;
-    color: var(--accent-color, inherit);
+}
+
+[article-about] {
+  --color--NobleBlack:  hsl(226, 15%, 12%);
+  --color--NobleWhite:  hsl(226, 27%, 90%);
+  --color--NobleSky:    hsl(204, 22%, 55%);
+
+  --background-color: var(--color--NobleBlack);
+  --foreground-color: var(--color--NobleWhite);
+      --accent-color: var(--color--NobleSky);
+
+    background-color: var(--background-color);
+               color: var(--foreground-color);
+    padding: 1em 0;
+    margin:  1em 0;
+}
+
+[article-information] {
+    padding-bottom: 4em;
 }
 
 [article-information] li {
     padding-bottom: 1em;
+}
+
+[article-menu] {
+    padding-bottom: 4em;
 }
